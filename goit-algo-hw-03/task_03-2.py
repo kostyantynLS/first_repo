@@ -37,7 +37,3 @@ def get_numbers_ticket(min, max, quantity) -> list:
 
     # або просто return tickets_list.sort()
     return tickets_list
-
-# перевірка роботи
-#print( get_numbers_ticket(1,6,5) )
-#print( get_numbers_ticket(1,45,9) )

@@ -25,8 +25,3 @@ def get_days_from_today(date) -> int:
     date_days = abs(day_from - day_to)
 
     return date_days
-
-# перевірка роботи
-#print(get_days_from_today("2021-10-09"))
-#print(get_days_from_today("2021h10-k9"))
-#print(get_days_from_today("2а23-10_09"))
