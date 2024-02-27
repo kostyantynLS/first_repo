@@ -8,10 +8,10 @@ def get_numbers_ticket(min, max, quantity) -> list:
     # перевірка коректності вхідних умов
     if max<1 or min<1 or quantity<1:
         print("get_numbers_ticket() : Only positive values")
-        return ()
+        return list()
     if (max+1)<=(min+quantity):
         print("get_numbers_ticket() : Low range MIN to MAX")
-        return ()
+        return list()
 
     # bil - кількість квитків
     bil = quantity
@@ -37,3 +37,6 @@ def get_numbers_ticket(min, max, quantity) -> list:
 
     # або просто return tickets_list.sort()
     return tickets_list
+
+print(get_numbers_ticket(10,  4, 5))
+print(get_numbers_ticket(10, 14, 6))

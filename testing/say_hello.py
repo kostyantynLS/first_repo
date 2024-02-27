@@ -62,3 +62,15 @@ msg = "My long message about love"
 eDic = string_to_codes(msg)
 print(eDic)
 
+
+i = 1
+while i < 6:
+    print(i)
+    i += 1
+else:
+    print("i is no longer less than 6")
+
+if 1==1 & 2==2:
+    print('!!')
+
+d = lambda a: (2**a);   print(d(2))

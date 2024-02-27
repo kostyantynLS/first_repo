@@ -10,11 +10,9 @@ def normalize_phone(phone_number) -> str:
     # заміна символів
     phone_new = re.sub(r"[^+0123456789]", "", phone_number)
 
-    #  перевірка початку номеру, чи є "38"
-    if (phone_new[0:2] == "38"):
+    if len(phone_new) >= 12 and phone_new[0] != "+":
         phone_new = "+" + phone_new
-    #  перевірка початку номеру, чи є "+38"
-    if (phone_new[0:3] != "+38"):
+    if len(phone_new) == 10:
         phone_new = "+38" + phone_new
 
     return phone_new
