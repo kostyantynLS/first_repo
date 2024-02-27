@@ -38,5 +38,3 @@ def get_numbers_ticket(min, max, quantity) -> list:
     # або просто return tickets_list.sort()
     return tickets_list
 
-print(get_numbers_ticket(10,  4, 5))
-print(get_numbers_ticket(10, 14, 6))

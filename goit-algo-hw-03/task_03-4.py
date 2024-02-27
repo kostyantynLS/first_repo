@@ -53,14 +53,3 @@ def get_upcoming_birthdays(user_list) -> dict:
             birth_list.append(birth_user)
 
     return birth_list
-
-users = [
-    {"name": "John Doe", "birthday": "2024.02.27"},
-    {"name": "William Xing", "birthday": "1985.03.02"},
-    {"name": "Anna Bing", "birthday": "1982.03.03"},
-    {"name": "Mondi Wood", "birthday": "1987.06.33"},
-    {"name": "Jane Smith", "birthday": "1990.01.27"}
-]
-
-upcoming_birthdays = get_upcoming_birthdays(users)
-print("Список привітань на цьому тижні:", upcoming_birthdays)
