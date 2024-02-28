@@ -45,7 +45,6 @@ def get_upcoming_birthdays(user_list) -> dict:
             # визначаємо день, на який припадає вітання
             wd = date_birth_new.weekday()
             if wd >= 5:
-                print('!!', wd)
                 date_birth_new = date_birth_new + datetime.timedelta(days=7-wd)
             
             # записуємо день привітання з днем народження
