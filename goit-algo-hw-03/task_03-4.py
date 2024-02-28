@@ -29,14 +29,12 @@ def get_upcoming_birthdays(user_list) -> dict:
         date_birth_new = datetime.datetime.strptime( \
             str(date_curr_year)+"."+date_birth.strftime("%m.%d"),"%Y.%m.%d")        
 
-        # Перевірка, чи вже минув день народження в цьому році
-        # Якщо минув, рухаємо дату на наступний рік.
-        if date_birth_new < date_curr:
+        # Перевірка, чи вже минув день народження в цьому році. Якщо минув, рухаємо дату на наступний рік.
+        if date_birth_new.toordinal() < date_curr.toordinal():
             date_curr_year += 1
             date_birth_new = datetime.datetime.strptime( \
                 str(date_curr_year)+"."+date_birth.strftime("%m.%d"),"%Y.%m.%d")        
 
-        #Визначаємо різницю між днем народження та поточним днем для визначення днів народження на наступний тиждень.
         date_diff = date_birth_new.toordinal() - date_curr.toordinal()
         if date_diff <= 7:
             birth_user = dict()
