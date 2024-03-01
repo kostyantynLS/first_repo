@@ -6,8 +6,6 @@ import datetime
 def get_upcoming_birthdays(user_list) -> dict:
 
     birth_list = list()
-
-    # поточна дата
     date_curr = datetime.datetime.today()
 
     # обробляємо перелік користувачів та дат
