@@ -29,7 +29,10 @@ def main():
     else:
         directory = sys.argv[1]
     # run scan
-    recursive_scan(directory,0)
+    try:
+        recursive_scan(directory, 0)
+    except Exception as e:
+        print(f'exception {e} at module {sys.argv[0]}') 
 
 if __name__ == "__main__":
     main()

@@ -28,7 +28,7 @@ def total_salary(path_to_salary_text = "salary.txt") -> tuple:
             #check average
             if items >0:
                 average = total / items
-                average = round(average, 4)
+                average = round(average, 2) # as XXXXXX.YY
             else:
                 print('No salaries found')
 
