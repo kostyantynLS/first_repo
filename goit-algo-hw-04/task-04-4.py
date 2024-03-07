@@ -10,7 +10,7 @@
 '''
 import datetime
 
-def say_hello()
+def say_hello():
     return "How can I help you?"
 def parse_input(cmd_line:str):
     info = cmd_line.split(" ")
@@ -71,20 +71,19 @@ def curr_time():
     dt = datetime.datetime.now()
     return dt.strftime("%H:%M:%S")
 
-def CLI_header():
-    print('****************************************\n'\
-          '**         Command line assistant     **\n'\
-          '****************************************\n')
-
 def main():
-    CLI_header()
-    print("Hello dear!\n")
+    CLI_header = '****************************************\n'\
+                 '**         Command line assistant     **\n'\
+                 '****************************************\n'
+
+    print(CLI_header)
+    print(say_hello())
     contacts ={}
     while True:
         text = input('Type here your command: ')
         cmds = parse_input(text)
         if cmds[0]=='help':
-            CLI_header()
+            print(CLI_header)
             print('type "list" to see all commands')
         elif cmds[0]=='list':
             print(  'bye, exit, close  - exit from assistant\n'\
